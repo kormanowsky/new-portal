@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "NewPortal",
+    "version": "0.0.1",
+    "description": "Скрипт изменяет дизайн Школьного портала на более современный. Автор скрипта не собирает какие-либо персональные данные пользователей Школьного портала, скрипт выполняется на компьютере конечного пользователя с его разрешения.
+    Задача скрипта - изменить представление выдаваемой серверами Школьного портала информации.",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.school.mosreg.ru/*"
+            ],
+            "js": [
+                "js/jquery.min.js",
+                "js/jextract.min.js",
+                "js/mustache.min.js",
+                "js/chart.min.js",
+                "js/moment.min.js",
+                "js/calendar.min.js",
+                "js/main.min.js"
+             ]
+      }
+   ],
+    "web_accessible_resources": [
+        "templates/*",
+        "css/*",
+        "fonts/*"
+    ]
+}
